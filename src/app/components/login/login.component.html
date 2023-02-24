@@ -1,0 +1,20 @@
+<div class="body">
+  <div class="login">
+    <mat-spinner diameter="50" class="spinner" *ngIf="loading"></mat-spinner>
+    <!-- ========== LoginForm ========== -->
+    <form [formGroup]="loginForm" (ngSubmit)="signin()" *ngIf="!loading">
+      <mat-form-field class="width" appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" />
+      </mat-form-field>
+      <mat-form-field class="width" appearance="fill">
+        <mat-label>Password</mat-label>
+        <input type="password" matInput formControlName="password" />
+      </mat-form-field>
+      <br />
+      <button type="submit" mat-raised-button class="width signin_btn" color="primary" [disabled]="loginForm.invalid">
+        Sign In
+      </button>
+    </form>
+  </div>
+</div>
