@@ -1,0 +1,15 @@
+<mat-toolbar color="primary">
+    <span>My App</span>
+
+    <span class="example-spacer"></span>
+
+    <button mat-button routerLink="/dashboard">Dashboard</button>
+    <button mat-button routerLink="/dashboard/users">Users</button>
+    <button mat-button routerLink="/dashboard/reports">Reports</button>
+
+    <span class="example-spacer"></span>
+
+    <button (click)="logout()" mat-icon-button routerLink="/logout" class="example-icon favorite-icon">
+        <mat-icon>logout</mat-icon>
+    </button>
+</mat-toolbar>
